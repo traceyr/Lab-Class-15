@@ -11,18 +11,21 @@
   </header>
   <div id="conversionCalc">
     <div id="choiceDropDown">
-      <select name="mainDropDown">
+      <select name="mainDropDown" id="mainDropDown">
         <option value="in/cm">Inches/Centimeters</option>
         <option value="floz/ml">Fluid oz/Millileters</option>
         <option value="miles/km">Miles/Kilometers</option>
         <option value="lbs/kg">Pounds/Kilograms</option>
         <option value="standard/metric">Shit Ton/Metric Shit Ton</option>
       </select>
+      <button id="button-1">Select</button>
       </div>
       <div id="form">
         <form>
+          <p id="leftConv">left</p>
           <input type="text" class="leftConv">
           <input type="submit" name="Submit" value="Submit" class="leftConv">
+          <p id="rightConv">right</p>
           <input type="text"  class="rightConv">
           <input type="submit" name="Submit" value="Submit"class="rightConv">
         </form>
