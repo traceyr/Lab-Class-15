@@ -7,11 +7,11 @@ function DropDownObject(leftData, rightData, dropDownValue){
   dropDownArray.push(this);
 };
 
-new DropDownObject('Inches', 'Centimeters', 'in/cm');
-new DropDownObject('Fluid oz', 'Milliliters', 'floz/ml');
-new DropDownObject('Miles', 'Kilometers', 'miles/km');
-new DropDownObject('Pounds', 'Kilograms', 'lbs/kg');
-new DropDownObject('Standard Shit Tons', 'Metric Shit Tons', 'standard/metric');
+var objectOne = new DropDownObject('Inches', 'Centimeters', 'in/cm');
+var objectTwo = new DropDownObject('Fluid oz', 'Milliliters', 'floz/ml');
+var objectThree = new DropDownObject('Miles', 'Kilometers', 'miles/km');
+var objectFour = new DropDownObject('Pounds', 'Kilograms', 'lbs/kg');
+var objectFive = new DropDownObject('Standard Shit Tons', 'Metric Shit Tons', 'standard/metric');
 
 var mainDropDown = document.getElementById('mainDropDown');
 var buttonOne = document.getElementById('button-1');
@@ -20,6 +20,7 @@ buttonOne.addEventListener('click', dropDownSelector);
 function dropDownSelector(){
   var mainDropDownValue = mainDropDown.value;
   console.log(mainDropDownValue);
+
   for (var i = 0; i < dropDownArray.length; i ++){
     if(mainDropDownValue === dropDownArray[i].dropDownValue) {
       console.log('WOOOHOO FUCK YEAH');
@@ -31,42 +32,80 @@ function dropDownSelector(){
   }
 }
 
-function inToCm(number) {
+objectOne.leftfnt = function inToCm(number) {
   return number * 2.540;
-}
+};
 
-function cmToIN(number) {
+objectOne.rightfnt = function cmToIN(number) {
   return number / 2.540;
-}
+};
 
-function flToMl(number) {
+objectTwo.leftfnt = function flToMl(number) {
   return number * 29.574;
-}
+};
 
-function mlToFl(number){
+objectTwo.rightfnt = function mlToFl(number){
   return number / 29.574;
-}
+};
 
-function mToKm(number) {
+objectThree.leftfnt = function mToKm(number) {
   return number * 1.609;
-}
+};
 
-function kmToM(number) {
+objectThree.rightfnt = function kmToM(number) {
   return number / 1.609;
-}
+};
 
-function kgToLbs(number) {
-  return number / 0.454;
-}
-
-function lbsToKg(number) {
+objectFour.leftfnt = function lbsToKg(number) {
   return number * 0.454;
-}
+};
 
-function stndToMetric(number) {
+objectFour.rightfnt = function kgToLbs(number) {
+  return number / 0.454;
+};
+
+objectFive.leftfnt = function stndToMetric(number) {
   return number * 0.907;
+};
+
+objectFive.rightfnt = function metricToStnd(number) {
+  return number / 0.907;
+};
+
+function handleLeftClick(e) {
+  e.preventDefault();
+  var leftConv = document.getElementById('leftConv');
+  for (var j = 0; j < dropDownArray.length; j++){
+    if(leftConv.innerHTML === dropDownArray[j].leftData){
+      console.log('YEAHHHH');
+      var leftValue = document.getElementById('leftText').value;
+      console.log(leftValue);
+      var leftfntValue = dropDownArray[j].leftfnt(leftValue);
+      console.log(leftfntValue);
+      var elRight = document.getElementById('leftTextContent');
+      elRight.textContent = leftfntValue + ' ' + dropDownArray[j].rightData;
+    }
+  }
 }
 
-function metricToStnd(number) {
-  return number / 0.907;
+function handleRightClick(e) {
+  e.preventDefault();
+  var rightConv = document.getElementById('rightConv');
+  for (var j = 0; j < dropDownArray.length; j++){
+    if(rightConv.innerHTML === dropDownArray[j].rightData){
+      console.log('YEAHHHH');
+      var rightValue = document.getElementById('rightText').value;
+      console.log(rightValue);
+      var rightfntValue = dropDownArray[j].rightfnt(rightValue);
+      console.log(rightfntValue);
+      var elLeft = document.getElementById('rightTextContent');
+      elLeft.textContent = rightfntValue + ' ' + dropDownArray[j].rightData;
+    }
+  }
 }
+
+var leftButtonClick = document.getElementById('leftButton');
+leftButtonClick.addEventListener('click', handleLeftClick);
+
+var rightButtonClick = document.getElementById('rightButton');
+rightButtonClick.addEventListener('click', handleRightClick);
