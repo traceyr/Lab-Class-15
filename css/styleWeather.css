@@ -1,1 +1,306 @@
 /*css*/
+body {
+  margin: 0 auto;
+  font-family: Arial;
+  font-size: 12px;
+}
+
+a:link {
+  color: #357EC7;
+}
+
+span {
+  font-weight: bold;
+}
+
+#logo {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo-left {
+  width: 60%;
+}
+
+#nav-bar {
+  background-color: #f1f1f1;
+  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+  width: 100%;
+  height: 47px;
+  display: flex;
+  align-self: center;
+}
+
+#top-nav {
+  width: 70%;
+  margin: 0;
+  padding-left: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+
+#top-nav li {
+  color: gray;
+  font-family: arial;
+  font-size: 12px;
+  list-style: none;
+}
+
+#weather-content {
+  height: 162px;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column wrap;
+}
+
+#search-input {
+  margin-top: 5px;
+  margin-right: 130px;
+}
+
+#search-input input {
+  height: 30px;
+  width: 125px;
+  margin-left: 10px;
+  margin-right: 3px;
+  border-radius: 5px;
+  border: 1px solid #d7d7d7;
+}
+
+#search-input button {
+  height: 34px;
+  width: 43px;
+  font-size: 14px;
+  border: 1px solid #d7d7d7;
+  border-radius: 5px;
+  background: rgba(255,255,255,1);
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(209,205,209,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(209,205,209,1)));
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(209,205,209,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(209,205,209,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(209,205,209,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(209,205,209,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d1cdd1', GradientType=0 );
+}
+
+#view-link {
+  margin-top: 1px;
+  margin-left: 10px;
+  margin-bottom: 8px;
+}
+
+#search-text {
+  margin-top: 1px;
+  margin-left: 10px;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+
+#seattle-link {
+  font-size: 18px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+#spanish {
+  margin-bottom: 0px;
+}
+
+#bottom {
+  margin-left: 10px;
+  width: 133px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+#share {
+  margin-bottom: 10px;
+}
+
+#right {
+  width: 720px;
+}
+
+#right h2 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+#right-content {
+  margin-top: 4px;
+  margin-bottom: 0px;
+}
+
+#read-link {
+  margin-top: 2px;
+}
+
+#conditions {
+  width: 98%;
+  margin-left: 1%;
+  margin-top: -10px;
+}
+
+#conditions-title {
+  background-color: #f1f1f1;
+  border: 1px solid #d7d7d7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+}
+
+#conditions-content {
+  margin-left: 10px;
+}
+
+#current-conditions {
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+
+#seattle-condition {
+  color: #0D4F8B;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+}
+
+#coordinates {
+  margin-top: 1px;
+  margin-bottom: 12px;
+}
+
+#conditions-content2 {
+  display: flex;
+  width: 100%;
+  height: 123px;
+  border: 1px solid #d7d7d7;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#conditions-left {
+  margin-top: 10px;
+  height: 95px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  flex-flow: column wrap;
+}
+
+#conditions-left2 {
+  margin-left: 12px;
+  height: 100%;
+}
+
+#clouds-img {
+  width: 95px;
+  margin-left: 10px;
+}
+
+#fewclouds {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+#farenheit {
+  font-weight: bolder;
+  font-size: 40px;
+  margin: 0px;
+}
+
+#celcius {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+}
+
+#list-humidity {
+  text-align: right;
+  list-style: none;
+  font-weight: bold;
+  margin-left: 60px;
+}
+
+#list-humidity-items {
+  list-style: none;
+  padding-left: 5px;
+}
+
+#information-list {
+  list-style: none;
+  margin-left: 260px;
+}
+
+#forecast-content {
+  width: 98%;
+  margin-left: 1%;
+  margin-top: 10px;
+}
+
+#forecast-title {
+  background-color: #f1f1f1;
+  border: 1px solid #d7d7d7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+}
+
+#forecastheader {
+  font-weight: bold;
+  margin-left: 10px;
+  margin-bottom: 1px;
+}
+
+#loc-seattle {
+  color: #0D4F8B;
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+#weather-days {
+  display: flex;
+  width: 100%;
+  border: 1px solid #d7d7d7;
+  justify-content: space-around;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.day-block {
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  text-align: center;
+  width: 10%;
+}
+
+.day-block h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.temp-blue {
+  font-weight: bold;
+  color: #357EC7;
+}
+
+.temp-red {
+  font-weight: bold;
+  color: red;
+}

@@ -4,16 +4,18 @@
   <title>
     National Weather Service - National Oceanic and Atmospheric Administration
   </title>
+  <link href="css/styleWeather.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-  <div id="logo"></div>
+  <div id="logo">
     <div id="logo-left">
       <img src="images/header_noaa.png"></img>
       <img src="images/header_nws.png"></img>
     </div>
     <div id="logo-right">
       <img src="images/header_doc.png"></img>
+    </div>
   </div>
   <div id="nav-bar">
     <ul id="top-nav">
@@ -27,40 +29,44 @@
       <li> SEARCH </li>
       <li> ABOUT </li>
     </ul>
-</div>
+  </div>
   <div id="weather-content">
     <div id="search-input">
       <input type="text" name="search"><button type="button"> Go </button>
-      <p><a href="locations.html"> View Location Examples </a></p>
-      <p> Your local forecast office is </p>
-      <p><a href="seattle.html"> Seattle, WA </a></p>
+      <p id="view-link"><a href="locations.html"> View Location Examples </a></p>
+      <p id="search-text"> Your local forecast office is </p>
+      <p id="seattle-link"><a href="seattle.html"> Seattle, WA </a></p>
     </div>
     <div id="bottom">
-      <p><a href="in-spanish.html"> En Espa&#241ol </a></p>
-      <p><a href="share.html"> Share </a></p>
+      <p id="spanish"><a href="in-spanish.html"> En Espa&#241;ol </a></p>
+      <p id="share"><a href="share.html"> Share </a></p>
     </div>
     <div id="right">
-      <h3> Rain, thunderstorms developing from southern Plains to mid-Atlantic </h3>
-      <p> A slow-moving storm system will be the focus for rain and thunderstorms from the southern Plains across to the Southeast and Mid-Atlantic States early this week. Locally heavy rainfall could lead to isolated flash flooding, especially in the mid-Mississippi River Valley on Tuesday. Isolated severe thunderstorms will be possible Tuesday near the Gulf Coast associated with this same storm system. </p>
-      <p><a href="read.html"> Read More... </a></p>
+      <h2> Rain, thunderstorms developing from southern Plains to mid-Atlantic </h2>
+      <p id="right-content"> A slow-moving storm system will be the focus for rain and thunderstorms from the southern Plains across to the Southeast and Mid-Atlantic States early this week. Locally heavy rainfall could lead to isolated flash flooding, especially in the mid-Mississippi River Valley on Tuesday. Isolated severe thunderstorms will be possible Tuesday near the Gulf Coast associated with this same storm system. </p>
+      <p id="read-link"><a href="read.html"> Read More... </a></p>
     </div>
   </div>
 
   <div id="conditions">
     <div id="conditions-title">
-      <p> Current conditions at </p>
-      <a href="city.html"> Seattle, Seattle Boeing Field (KBFI) </a>
-      <p><span> Lat: </span> 47.57&#176N <span> Lon: </span> -122.41&#176W <span> Elev: 16ft. </span></p>
+      <div id="conditions-content">
+        <p id="current-conditions"> Current conditions at </p>
+        <p id="seattle-condition"> Seattle, Seattle Boeing Field (KBFI) </p>
+        <p id="coordinates"><span> Lat: </span> 47.57&#176;N <span> Lon: </span> -122.41&#176;W <span> Elev: </span> 16ft. </p>
+      </div>
     </div>
-    <div id="conditions-content">
+    <div id="conditions-content2">
       <div id="conditions-left">
-        <img src="images/a-few-clouds.png">
-        <p> A Few Clouds </p>
-        <p id="farenheit"> 45&#176F </p>
-        <p id="celcius"> 7&#176C </p>
+        <img id="clouds-img" src="images/a-few-clouds.png"></img>
+      </div>
+      <div id="conditions-left2">
+        <p id="fewclouds"> A Few Clouds </p>
+        <p id="farenheit"> 45&#176;F </p>
+        <p id="celcius"> 7&#176;C </p>
       </div>
       <div id="conditions-middle-left">
-        <ul>
+        <ul id="list-humidity">
           <li> Humidity </li>
           <li> Wind Speed </li>
           <li> Barometer </li>
@@ -71,19 +77,19 @@
         </ul>
       </div>
       <div id="conditions-middle-right">
-        <ul>
+        <ul id="list-humidity-items">
           <li> 90% </li>
           <li> SSE 8 MPH </li>
           <li> 30.34 in (1027.4mb) </li>
-          <li> 42&#176F (6&#176C) </li>
+          <li> 42&#176;F (6&#176;C) </li>
           <li> 10.00 mi </li>
-          <li> 41&#176F (5&#176C) </li>
+          <li> 41&#176;F (5&#176;C) </li>
           <li> 21 Feb 9:53 pm PST </li>
         </ul>
       </div>
       <div id="conditions-right">
-        <ul>
-          <li> More Information: </li>
+        <ul id="information-list">
+          <li><b> More Information: </b></li>
           <li><a href="local"> Local Forecast Office </a></li>
           <li><a href="localwx"> More Local Wx </a></li>
           <li><a href="history"> 3 Day History </a></li>
@@ -95,56 +101,57 @@
   </div>
   <div id="forecast-content">
     <div id="forecast-title">
-      <p> Extended Forecast for </p>
-      <p><a href="miles"> 2 Miles NW West Seattle WA </a></p>
+      <p id="forecastheader"> Extended Forecast for </p>
+      <p id="loc-seattle"> 2 Miles NW West Seattle WA </p>
     </div>
     <div id="weather-days">
       <div class="day-block">
-        <h1> Tonight </h1>
+        <h1> Tonight </h1><br />
         <img src="images/nshra60.png"> <br /> Showers Likely </img>
-        <p class="temp-blue"> Low: 40 &#176F </p>
+        <p class="temp-blue"><br /><br /><br /> Low: 40 &#176F </p>
       </div>
       <div class="day-block">
-        <h1> Monday </h1>
-        <img src="images/dualimage.png"> <br /> Showers Likely then Chance Showers </img>
+        <h1> Monday </h1><br />
+        <img src="images/dualimage.png"> <br /> Showers <br /> Likely then <br /> Chance <br /> Showers </img>
         <p class="temp-red"> High 50 &#176F </p>
       </div>
       <div class="day-block">
-        <h1> Monday Night </h1>
+        <h1> Monday <br /> Night </h1>
         <img src="images/nsct.png"> <br /> Partly Cloudy </img>
-        <p class="temp-blue"> Low: 37 &#176F </p>
+        <p class="temp-blue"><br /><br /><br /> Low: 37 &#176F </p>
       </div>
       <div class="day-block">
-        <h1> Tuesday </h1>
+        <h1> Tuesday </h1><br />
         <img src="images/few.png"> <br /> Sunny </img>
-        <p class="temp-red"> High: 52 &#176F </p>
+        <p class="temp-red"><br /><br /><br /> High: 52 &#176F </p>
       </div>
       <div class="day-block">
-        <h1> Tuesday Night </h1>
+        <h1> Tuesday <br /> Night </h1>
         <img src="images/nsct.png"> <br /> Partly Cloudy </img>
-        <p class="temp-blue"> Low: 41 &#176F </p>
+        <p class="temp-blue"><br /><br /><br /> Low: 41 &#176F </p>
       </div>
       <div class="day-block">
-        <h1> Wednesday </h1>
+        <h1> Wednesday </h1><br />
         <img src="images/bkn.png"> <br /> Partly Sunny </img>
-        <p class="temp-red"> High: 54 &#176F </p>
+        <p class="temp-red"><br /><br /><br /> High: 54 &#176F </p>
       </div>
       <div class="day-block">
-        <h1> Wednesday Night </h1>
+        <h1> Wednesday <br /> Night </h1>
         <img src="images/nbkn.png"> <br /> Mostly Cloudy </img>
-        <p class="temp-blue"> Low: 43 &#176F </p>
+        <p class="temp-blue"><br /><br /><br /> Low: 43 &#176F </p>
       </div>
       <div class="day-block">
-        <h1> Thursday </h1>
+        <h1> Thursday </h1><br />
         <img src="images/sct.png"> <br /> Mostly Sunny </img>
-        <p class="temp-red"> High: 56 &#176F </p>
+        <p class="temp-red"><br /><br /><br /> High: 56 &#176F </p>
       </div>
       <div class="day-block">
-        <h1> Thursday Night </h1>
+        <h1> Thursday <br /> Night </h1>
         <img src="images/nsct.png"> <br /> Partly Cloudy </img>
-        <p class="temp-blue"> Low: 45 &#176F </p>
+        <p class="temp-blue"><br /><br /><br /> Low: 45 &#176F </p>
       </div>
     </div>
+    <br />
   </div>
 
 </body>
